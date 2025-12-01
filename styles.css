@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  /* colors */
+  --color-white: hsl(0, 100%, 100%);
+  --color-grey: hsl(0, 0%, 58%);
+  --color-blue-700: hsl(235, 18%, 26%);
+  --color-blue-800: hsl(234, 29%, 20%);
+  --color-red: hsl(4, 100%, 67%);
+  --color-red-gradient: linear-gradient(
+    hsl(15, 100%, 61%),
+    hsl(346, 100%, 66%)
+  );
+  /* typography */
+  --font-family-base: 'Roboto', sans-serif;
+  --font-weight-base: 400;
+  --font-weight-bold: 700;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+  /* spacing */
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-800: 4rem;
+  --spacing-900: 4.5rem;
+  --spacing-1300: 6.5rem;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: var(--color-blue-700);
+  color: var(--color-blue-800);
+  font: var(--font-weight-base) var(--font-size-base) / var(--line-height-base)
+    var(--font-family-base);
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
