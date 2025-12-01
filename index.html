@@ -16,21 +16,65 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <!-- Sign-up form start -->
+    <main>
+      <div class="form-card">
+        <img
+          alt="Illustration"
+          class="form-image"
+          src="./assets/images/illustration-sign-up-mobile.svg"
+        />
 
-    Stay updated! Join 60,000+ product managers receiving monthly updates on:
-    Product discovery and building what matters Measuring to ensure updates are
-    a success And much more! Email address email@company.com Subscribe to
-    monthly newsletter
+        <div class="form-content">
+          <div class="form-text">
+            <h1 class="form-title">Stay updated!</h1>
 
-    <!-- Sign-up form end -->
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
 
-    <!-- Success message start -->
+            <ul class="form-list">
+              <li>
+                <img src="./assets/images/icon-list.svg" alt="" />
+                Product discovery and building what matters
+              </li>
+              <li>
+                <img src="./assets/images/icon-list.svg" alt="" />
+                Measuring to ensure updates are a success
+              </li>
+              <li>
+                <img src="./assets/images/icon-list.svg" alt="" />
+                And much more!
+              </li>
+            </ul>
+          </div>
 
-    Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message
+          <form novalidate>
+            <label class="email-label" for="email">Email address</label>
+            <input
+              class="email-input"
+              id="email"
+              pattern=".+@example\.com"
+              placeholder="email@company.com"
+              required
+              size="30"
+              type="email"
+            />
 
-    <!-- Success message end -->
+            <button class="submit-btn" type="submit">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Success message card -->
+      <div class="success-card">
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to
+          <span id="email-display"></span>. Please open it and click the button
+          inside to confirm your subscription.
+        </p>
+        <button type="button">Dismiss message</button>
+      </div>
+    </main>
   </body>
 </html>

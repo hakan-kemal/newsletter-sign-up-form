@@ -59,5 +59,93 @@ html {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+}
+
+.form-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-500);
+  padding: var(--spacing-500) var(--spacing-300) 2.75rem;
+}
+
+.form-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+}
+
+.form-title {
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: var(--font-weight-bold);
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+
+  & li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-200);
+  }
+}
+
+.email-label {
+  font-size: 0.75rem;
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-bold);
+  width: 100%;
+}
+
+.email-input {
+  margin-top: 0.25rem;
+  width: 100%;
+  border: 1px solid var(--color-grey);
+  border-radius: var(--spacing-100);
+  padding: var(--spacing-200) var(--spacing-300);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-grey);
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-300);
+  width: 100%;
+  border: none;
+  border-radius: var(--spacing-100);
+  padding: var(--spacing-200) var(--spacing-600);
+  background-color: var(--color-blue-800);
+  color: var(--color-white);
+  font-family: var(--font-family-montserrat);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.5rem;
+}
+
+.success-card {
+  display: none;
 }
