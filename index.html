@@ -75,15 +75,18 @@
         </div>
       </div>
 
-      <!-- Success message card -->
-      <div class="success-card">
-        <h1>Thanks for subscribing!</h1>
+      <div class="success-card" style="display: none">
+        <img
+          alt="Success checkmark icon inside a circle"
+          src="./assets/images/icon-success.svg"
+        />
+        <h1 class="success-title">Thanks for subscribing!</h1>
         <p>
           A confirmation email has been sent to
-          <span id="email-display"></span>. Please open it and click the button
-          inside to confirm your subscription.
+          <strong id="success-email"></strong>. Please open it and click the
+          button inside to confirm your subscription.
         </p>
-        <button type="button">Dismiss message</button>
+        <button class="close-btn" type="button">Dismiss message</button>
       </div>
     </main>
   </body>
