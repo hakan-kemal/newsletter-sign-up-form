@@ -5,8 +5,8 @@ const emailErrorMsg = document.getElementById('email-error-msg');
 const successCard = document.getElementById('success-card');
 const successEmail = document.getElementById('success-email');
 
-const show = (el) => el.classList.remove('hidden');
-const hide = (el) => el.classList.add('hidden');
+const show = (el, className) => el.classList.remove(className);
+const hide = (el, className) => el.classList.add(className);
 
 const validateEmail = (email) => {
   const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -15,23 +15,23 @@ const validateEmail = (email) => {
 
 function showSuccessMsg(email) {
   successEmail.textContent = email;
-  show(successCard);
-  hide(formCard);
+  show(successCard, 'remove');
+  hide(formCard, 'remove');
 
   form.reset();
-  hide(emailErrorMsg);
+  hide(emailErrorMsg, 'hidden');
   emailInput.classList.remove('error');
 }
 
 function showErrorMsg(hasError) {
   emailInput.setAttribute('aria-invalid', hasError ? 'true' : 'false');
   emailInput.classList.toggle('error', hasError);
-  hasError ? show(emailErrorMsg) : hide(emailErrorMsg);
+  hasError ? show(emailErrorMsg, 'hidden') : hide(emailErrorMsg, 'hidden');
 }
 
 function showFormCard() {
-  show(formCard);
-  hide(successCard);
+  show(formCard, 'remove');
+  hide(successCard, 'remove');
 }
 
 function handleSubmit(e) {

@@ -179,8 +179,8 @@ ul {
   }
 }
 
-#submit-btn,
-#dismiss-btn {
+.submit-btn,
+.dismiss-btn {
   display: flex;
   justify-content: center;
   margin-top: var(--spacing-300);
@@ -199,10 +199,6 @@ ul {
     background: var(--color-red-gradient);
     box-shadow: var(--box-shadow-btn-focus);
   }
-}
-
-#dismiss-btn {
-  margin-top: auto;
 }
 
 @media (min-width: 48rem) {
@@ -233,7 +229,7 @@ ul {
     font-size: 3.5rem;
   }
 
-  #submit-btn {
+  .submit-btn {
     margin-top: var(--spacing-200);
   }
 
@@ -267,6 +263,7 @@ ul {
   }
 
   .form-content {
+    gap: var(--spacing-400);
     max-width: 23.5rem;
     margin-block: var(--spacing-900);
   }
@@ -275,11 +272,19 @@ ul {
     gap: var(--spacing-400);
   }
 
-  #submit-btn {
+  .submit-btn {
     margin-top: var(--spacing-300);
   }
 }
 
+.dismiss-btn {
+  margin-top: auto;
+}
+
 .hidden {
+  visibility: hidden;
+}
+
+.remove {
   display: none;
 }
