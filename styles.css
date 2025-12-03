@@ -19,6 +19,7 @@
   --color-blue-700: hsl(235, 18%, 26%);
   --color-blue-800: hsl(234, 29%, 20%);
   --color-red: hsl(4, 100%, 67%);
+  --color-red-100: hsl(6, 72%, 94%);
   --color-red-gradient: linear-gradient(
     to right,
     hsl(15, 100%, 61%),
@@ -138,11 +139,15 @@ ul {
   }
 }
 
-.email-label {
-  display: block;
+.email-label-container {
+  display: flex;
+  justify-content: space-between;
   font-size: 0.75rem;
   font-weight: var(--font-weight-bold);
-  width: 100%;
+}
+
+.email-error {
+  color: var(--color-red);
 }
 
 .email-input {
@@ -159,10 +164,19 @@ ul {
   &::placeholder {
     color: var(--color-grey);
   }
+
+  &.error {
+    color: var(--color-red);
+    border-color: var(--color-red);
+    background-color: var(--color-red-100);
+  }
+  &.error::placeholder {
+    color: var(--color-red);
+  }
 }
 
 .submit-btn,
-.close-btn {
+.dismiss-btn {
   display: flex;
   justify-content: center;
   margin-top: var(--spacing-300);
@@ -179,10 +193,11 @@ ul {
   &:hover,
   &:focus-visible {
     background: var(--color-red-gradient);
+    box-shadow: 0 1rem 2rem 0 rgba(255, 97, 85, 0.5);
   }
 }
 
-.close-btn {
+.dismiss-btn {
   margin-top: auto;
 }
 
@@ -259,4 +274,8 @@ ul {
   .submit-btn {
     margin-top: var(--spacing-300);
   }
+}
+
+.hidden {
+  display: none;
 }

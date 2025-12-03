@@ -14,10 +14,12 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./styles.css" />
+
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <main>
-      <div class="form-card">
+      <div id="form-card" class="form-card">
         <img
           alt="Illustration of browser window and tablet screen"
           class="form-image mobile"
@@ -56,16 +58,20 @@
             </ul>
           </div>
 
-          <form novalidate>
-            <label class="email-label" for="email">Email address</label>
+          <form id="form" novalidate>
+            <div class="email-label-container">
+              <label class="email-label" for="email">Email address</label>
+              <span id="email-error-msg" class="email-error hidden" />
+            </div>
             <input
               class="email-input"
               id="email"
-              pattern=".+@example\.com"
+              name="email"
               placeholder="email@company.com"
               required
               size="30"
               type="email"
+              autocomplete="off"
             />
 
             <button class="submit-btn" type="submit">
@@ -75,7 +81,7 @@
         </div>
       </div>
 
-      <div class="success-card" style="display: none">
+      <div id="success-card" class="success-card hidden">
         <img
           alt="Success checkmark icon inside a circle"
           src="./assets/images/icon-success.svg"
@@ -86,7 +92,9 @@
           <strong id="success-email"></strong>. Please open it and click the
           button inside to confirm your subscription.
         </p>
-        <button class="close-btn" type="button">Dismiss message</button>
+        <button id="dismiss-btn" class="dismiss-btn" type="button">
+          Dismiss message
+        </button>
       </div>
     </main>
   </body>
