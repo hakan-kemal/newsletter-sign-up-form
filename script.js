@@ -15,6 +15,7 @@ const validateEmail = (email) => {
 
 function showSuccessMsg(email) {
   successEmail.textContent = email;
+  successCard.setAttribute('aria-hidden', 'false');
   show(successCard, 'remove');
   hide(formCard, 'remove');
 
@@ -31,6 +32,7 @@ function showErrorMsg(hasError) {
 
 function showFormCard() {
   show(formCard, 'remove');
+  successCard.setAttribute('aria-hidden', 'true');
   hide(successCard, 'remove');
 }
 

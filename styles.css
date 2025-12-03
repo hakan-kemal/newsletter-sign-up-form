@@ -190,6 +190,7 @@ ul {
   padding: var(--spacing-200) var(--spacing-600);
   background-color: var(--color-blue-800);
   color: var(--color-white);
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
   line-height: 1.5rem;
   cursor: pointer;
@@ -277,7 +278,7 @@ ul {
   }
 }
 
-.dismiss-btn {
+button.dismiss-btn {
   margin-top: auto;
 }
 

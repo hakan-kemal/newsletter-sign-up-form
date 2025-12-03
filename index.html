@@ -60,10 +60,12 @@
             <div class="email-label-container">
               <label class="email-label" for="email">Email address</label>
               <strong
-                id="email-error-msg"
                 class="email-error hidden"
+                id="email-error-msg"
                 role="alert"
-              ></strong>
+              >
+                Email is required
+              </strong>
             </div>
             <input
               aria-invalid="true"
@@ -84,7 +86,7 @@
         </div>
       </section>
 
-      <section id="success-card" class="success-card remove">
+      <section id="success-card" class="success-card remove" aria-hidden="true">
         <img
           alt="Success checkmark icon inside a circle"
           src="./assets/images/icon-success.svg"
