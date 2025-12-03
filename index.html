@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Frontend Mentor | Newsletter sign-up form with success message
-    </title>
+    <title>Frontend Mentor | Newsletter sign-up form</title>
 
     <link
       rel="icon"
@@ -19,19 +17,19 @@
   </head>
   <body>
     <main>
-      <div id="form-card" class="form-card">
+      <section id="form-card" class="form-card">
         <img
-          alt="Illustration of browser window and tablet screen"
+          alt="Illustration of browser window and tablet screen - mobile version"
           class="form-image mobile"
           src="./assets/images/illustration-sign-up-mobile.svg"
         />
         <img
-          alt="Illustration of browser window and tablet screen"
+          alt="Illustration of browser window and tablet screen - tablet version"
           class="form-image tablet"
           src="./assets/images/illustration-sign-up-tablet.svg"
         />
         <img
-          alt="Illustration of browser window and tablet screen"
+          alt="Illustration of browser window and tablet screen - desktop version"
           class="form-image desktop"
           src="./assets/images/illustration-sign-up-desktop.svg"
         />
@@ -44,15 +42,15 @@
 
             <ul class="form-list">
               <li>
-                <img src="./assets/images/icon-list.svg" alt="" />
+                <img src="./assets/images/icon-list.svg" alt="Checkmark icon" />
                 Product discovery and building what matters
               </li>
               <li>
-                <img src="./assets/images/icon-list.svg" alt="" />
+                <img src="./assets/images/icon-list.svg" alt="Checkmark icon" />
                 Measuring to ensure updates are a success
               </li>
               <li>
-                <img src="./assets/images/icon-list.svg" alt="" />
+                <img src="./assets/images/icon-list.svg" alt="Checkmark icon" />
                 And much more!
               </li>
             </ul>
@@ -61,27 +59,28 @@
           <form id="form" novalidate>
             <div class="email-label-container">
               <label class="email-label" for="email">Email address</label>
-              <span id="email-error-msg" class="email-error hidden" />
+              <strong id="email-error-msg" class="email-error hidden"></strong>
             </div>
             <input
+              aria-invalid="true"
+              aria-required="true"
+              aria-errormessage="email-error-msg"
               class="email-input"
               id="email"
               name="email"
               placeholder="email@company.com"
-              required
-              size="30"
               type="email"
               autocomplete="off"
             />
 
-            <button class="submit-btn" type="submit">
+            <button id="submit-btn" type="submit">
               Subscribe to monthly newsletter
             </button>
           </form>
         </div>
-      </div>
+      </section>
 
-      <div id="success-card" class="success-card hidden">
+      <section id="success-card" class="success-card hidden">
         <img
           alt="Success checkmark icon inside a circle"
           src="./assets/images/icon-success.svg"
@@ -92,10 +91,8 @@
           <strong id="success-email"></strong>. Please open it and click the
           button inside to confirm your subscription.
         </p>
-        <button id="dismiss-btn" class="dismiss-btn" type="button">
-          Dismiss message
-        </button>
-      </div>
+        <button id="dismiss-btn" type="button">Dismiss message</button>
+      </section>
     </main>
   </body>
 </html>

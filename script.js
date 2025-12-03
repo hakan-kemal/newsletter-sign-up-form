@@ -1,9 +1,8 @@
-const formCard = document.getElementById('form-card');
-const successCard = document.getElementById('success-card');
-
 const form = document.getElementById('form');
+const formCard = document.getElementById('form-card');
 const emailInput = document.getElementById('email');
 const emailErrorMsg = document.getElementById('email-error-msg');
+const successCard = document.getElementById('success-card');
 const successEmail = document.getElementById('success-email');
 
 const show = (el) => el.classList.remove('hidden');
@@ -24,6 +23,12 @@ function showSuccessMsg(email) {
   emailInput.classList.remove('error');
 }
 
+function showErrorMsg(hasError) {
+  emailInput.setAttribute('aria-invalid', hasError ? 'true' : 'false');
+  emailInput.classList.toggle('error', hasError);
+  hasError ? show(emailErrorMsg) : hide(emailErrorMsg);
+}
+
 function showFormCard() {
   show(formCard);
   hide(successCard);
@@ -39,8 +44,7 @@ function handleSubmit(e) {
       ? 'Email is required'
       : 'Valid email required';
 
-    emailInput.classList.add('error');
-    show(emailErrorMsg);
+    showErrorMsg(true);
     return;
   }
 
@@ -49,7 +53,6 @@ function handleSubmit(e) {
 
 document.getElementById('dismiss-btn').addEventListener('click', showFormCard);
 emailInput.addEventListener('input', () => {
-  emailInput.classList.remove('error');
-  hide(emailErrorMsg);
+  showErrorMsg(false);
 });
 form.addEventListener('submit', handleSubmit);
